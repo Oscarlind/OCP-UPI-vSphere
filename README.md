@@ -15,4 +15,4 @@ SERVER-HOSTNAME is the chosen hostname for the machine.
 
 TO-DO NEXT:
 
-- 
+- vSphere account
