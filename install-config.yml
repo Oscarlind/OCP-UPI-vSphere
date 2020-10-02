@@ -1,0 +1,36 @@
+apiVersion: v1
+baseDomain: "{{ base_domain }}" 
+compute: 
+- hyperthreading: Enabled 
+  name: worker
+  replicas: 0
+controlPlane: 
+  hyperthreading: Enabled 
+  name: master
+  replicas: 0
+metadata:
+  name: "{{ env_name | lower }}"
+proxy:
+  httpProxy: http://{{ PROXY }}
+  httpsProxy: http://{{ PROXY}} # NOTE the address is supposed to be "http" on both the httpProxy and httpsProxy
+networking:
+  clusterNetwork:
+  - cidr: {{ cluster_cidr }}
+    hostPrefix: 23
+  networkType: OpenShiftSDN
+  serviceNetwork:
+  - {{ service_network }}
+platform:
+  vsphere:
+    vcenter: "{{ vcenter_server }}"
+    username: "{{ vcenter_username }}"
+    password: "{{ vcenter_password }}"
+    datacenter: "{{ vcenter_datacenter }}"
+    defaultDatastore: "{{ vcenter.datastore }}"
+    folder: "{{ vcenter_folder }}" # Not necessarily needed
+    network: "{{ VM_Network }}" # Not necessarily needed
+    cluster: "{{ vcenter_cluster_name }}" # Not necessarily needed
+pullSecret: "{{ pull_secret }}"
+sshKey: "{{ ssh_key }}"
+additionalTrustBundle:  | 
+  {{ ca_bundle | indent(width=2) | indent(width=2, indentfirst=true) }}
