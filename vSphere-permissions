@@ -1,0 +1,5 @@
+### Look at this for a finished script setting up the role. https://github.com/RedHatOfficial/ocp4-vsphere-upi-automation/blob/master/extras/vmware-vcenter-permissions.sh ###
+
+### Above is for static provisioning, here is the "official" one for dynamic: https://vmware.github.io/vsphere-storage-for-kubernetes/documentation/vcp-roles.html#dynamic-provisioning ###
+
+# TO-DO, TABLE FOR THE ROLES AND PERMISSIONS
