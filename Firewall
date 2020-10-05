@@ -1,22 +1,22 @@
 Table 1. All machines to all machines
 
-Protocol  | Port        | Description                  |
+Protocol  | Port        | Description                  
 -------------------------------------------------------
-| ICMP    | N/A         | Network reachability tests   |
-| TCP     | 9000-9999   | Host level services, including node exporter (9100-9101) and cluster version operator (9099)   |
-| TCP     | 10250-10259 | Default ports that Kubernetes reserves    |
-| TCP     | 10256       | openshift-sdn    |
-| UDP     | 4789        | VXLAN and Geneve    |
-| UDP     | 6081        | VXLAN and Geneve    |
-| UDP     | 9000-9999   | Host level services, including node exporter (9100-9101)   |
-| TCP/UDP | 30000-32767 | Kubernetes NodePort    |
+| ICMP    | N/A         | Network reachability tests   
+| TCP     | 9000-9999   | Host level services, including node exporter (9100-9101) and cluster version operator (9099)   
+| TCP     | 10250-10259 | Default ports that Kubernetes reserves    
+| TCP     | 10256       | openshift-sdn    
+| UDP     | 4789        | VXLAN and Geneve    
+| UDP     | 6081        | VXLAN and Geneve    
+| UDP     | 9000-9999   | Host level services, including node exporter (9100-9101)   
+| TCP/UDP | 30000-32767 | Kubernetes NodePort    
 
 
 
 
 Table 2. All machines to control plane
 
-Protocol  | Port        | Description    |
+Protocol  | Port        | Description    
 -------------------------------------------------------
-| TCP     | 2379-2380   | etcd server, peer, and metric ports |
-| TCP     | 6443        | Kubernetes API                      |
+| TCP     | 2379-2380   | etcd server, peer, and metric ports 
+| TCP     | 6443        | Kubernetes API                      
