@@ -35,3 +35,8 @@ pullSecret: "{{ pull_secret }}"
 sshKey: "{{ ssh_key }}"
 additionalTrustBundle:  | 
   {{ ca_bundle | indent(width=2) | indent(width=2, indentfirst=true) }}
+# Or like this (less ansible more standard yaml)
+#additionalTrustBundle: | 
+#    -----BEGIN CERTIFICATE-----
+#    <MY_TRUSTED_CA_CERT>
+#    -----END CERTIFICATE----
