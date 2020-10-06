@@ -13,6 +13,7 @@ metadata:
 proxy:
   httpProxy: http://{{ PROXY }}
   httpsProxy: http://{{ PROXY}} # NOTE the address is supposed to be "http" on both the httpProxy and httpsProxy
+  noProxy: example.com,test.com,another-example.com # Important is to have them comma (,) separated without spaces.
 networking:
   clusterNetwork:
   - cidr: {{ cluster_cidr }}
