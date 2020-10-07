@@ -3,13 +3,13 @@ baseDomain: "{{ base_domain }}"
 compute: 
 - hyperthreading: Enabled 
   name: worker
-  replicas: 0
+  replicas: 0   # Must be set to 0 for User Provisioned Infrastructure as workers will be manually deployed
 controlPlane: 
   hyperthreading: Enabled 
   name: master
-  replicas: 0
+  replicas: 3
 metadata:
-  name: "{{ env_name | lower }}"
+  name: "{{ env_name | lower }}" # Cluster name
 proxy:
   httpProxy: http://{{ PROXY }}
   httpsProxy: http://{{ PROXY}} # NOTE the address is supposed to be "http" on both the httpProxy and httpsProxy
